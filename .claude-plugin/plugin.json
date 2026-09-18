@@ -1,0 +1,9 @@
+{
+  "name": "message-queue",
+  "version": "0.1.0",
+  "description": "Idempotent message queue with rate-limit recovery. Queues messages that fail due to rate limits across any channel, schedules retries, and processes them when limits clear.",
+  "author": {
+    "name": "Femi Odunaiya",
+    "email": "femiodunaiya@gmail.com"
+  }
+}
