@@ -1,5 +1,5 @@
 {
-  "name": "@openclaw/plugin-message-queue",
+  "name": "@0xnagato/openclaw-message-queue",
   "version": "0.1.0",
   "description": "Idempotent message queue with rate-limit recovery for OpenClaw",
   "type": "module",
