@@ -1,0 +1,36 @@
+{
+  "id": "message-queue",
+  "name": "Message Queue",
+  "description": "Idempotent message queue with rate-limit recovery across all messaging channels. Queues messages that fail due to rate limits, schedules retries, and processes them when limits clear.",
+  "contracts": {
+    "tools": [
+      "mq_enqueue",
+      "mq_process",
+      "mq_status",
+      "mq_ack"
+    ]
+  },
+  "activation": {
+    "onStartup": true
+  },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "queuePath": {
+        "type": "string",
+        "description": "Absolute path to the queue state file. Defaults to <workspace>/message-queue-state.json"
+      },
+      "maxRetries": {
+        "type": "number",
+        "description": "Maximum retry attempts per message before marking failed",
+        "default": 5
+      },
+      "defaultRetryDelayMs": {
+        "type": "number",
+        "description": "Default delay in ms when retry-after is not parseable",
+        "default": 60000
+      }
+    },
+    "additionalProperties": false
+  }
+}
