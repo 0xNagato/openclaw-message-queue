@@ -1,3 +1,7 @@
+---
+description: "Idempotent message queue with rate-limit recovery across all messaging channels"
+---
+
 # Message Queue — Rate-Limit Recovery
 
 Idempotent message queue for recovering from rate limits across any messaging
